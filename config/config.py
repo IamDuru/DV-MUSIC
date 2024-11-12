@@ -33,20 +33,20 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
 
 CLEANMODE_DELETE_MINS = int(
-    getenv("CLEANMODE_MINS", "18000")
+    getenv("CLEANMODE_MINS", "12000")
 )  # Remember to give value in Seconds
 
 
 # Custom max audio(music) duration for voice chat. set DURATION_LIMIT in variables with your own time(mins), Default to 60 mins.
 
 DURATION_LIMIT_MIN = int(
-    getenv("DURATION_LIMIT", "3000")
+    getenv("DURATION_LIMIT", "60")
 )  # Remember to give value in Minutes
 
 
 EXTRA_PLUGINS = getenv(
     "EXTRA_PLUGINS",
-    "True",
+    "False",
 )
 
 # Fill True if you want to load extra plugins
@@ -54,7 +54,7 @@ EXTRA_PLUGINS = getenv(
 
 EXTRA_PLUGINS_REPO = getenv(
     "EXTRA_PLUGINS_REPO",
-    "https://github.com/IamDvis/DV-EXTRAPLUGIN",
+    "",
 )
 # Fill here the external plugins repo where plugins that you want to load
 
@@ -66,7 +66,7 @@ EXTRA_PLUGINS_FOLDER = getenv("EXTRA_PLUGINS_FOLDER", "plugins")
 
 # Duration Limit for downloading Songs in MP3 or MP4 format from bot
 SONG_DOWNLOAD_DURATION = int(
-    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "1000")
+    getenv("SONG_DOWNLOAD_DURATION_LIMIT", "30")
 )  # Remember to give value in Minutes
 
 
