@@ -8,3 +8,4 @@
 # All rights reserved.
 
 from .config import *
+from .config import AYU
