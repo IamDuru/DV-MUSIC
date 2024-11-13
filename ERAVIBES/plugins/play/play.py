@@ -18,7 +18,7 @@ from pyrogram.types import InlineKeyboardMarkup, InputMediaPhoto, Message
 from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
-from config import BANNED_USERS, lyrical, AYU
+from config import AYU, BANNED_USERS, lyrical
 from ERAVIBES import LOGGER, Apple, Resso, Saavn, SoundCloud, Spotify, Telegram, YouTube, app
 from ERAVIBES.core.call import ERA
 from ERAVIBES.utils import seconds_to_min, time_to_seconds
