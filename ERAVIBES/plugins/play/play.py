@@ -45,8 +45,8 @@ AYU = [
 
 user_last_message_time = {}
 user_command_count = {}
-SPAM_WINDOW_SECONDS = 3  # Set the time window for spam checks (5 seconds for example)
-SPAM_THRESHOLD = 1
+SPAM_WINDOW_SECONDS = 5  # Set the time window for spam checks (5 seconds for example)
+SPAM_THRESHOLD = 2
 
 
 @app.on_message(
