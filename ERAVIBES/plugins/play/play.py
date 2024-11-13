@@ -45,8 +45,8 @@ AYU = [
 
 user_last_message_time = {}
 user_command_count = {}
-SPAM_WINDOW_SECONDS = 5  # Set the time window for spam checks (5 seconds for example)
-SPAM_THRESHOLD = 2
+SPAM_WINDOW_SECONDS = 3  # Set the time window for spam checks (5 seconds for example)
+SPAM_THRESHOLD = 1
 
 
 @app.on_message(
@@ -80,7 +80,7 @@ async def play_commnd(
     fplay,
 ):
     mystic = await message.reply_text(
-      _["play_2"].format(channel) if channel else "{random.choice(AYU)}"
+      _["play_2"].format(channel) if channel else random.choice(AYU)
     )
     plist_id = None
     slider = None
@@ -568,7 +568,7 @@ async def play_music(client, CallbackQuery, _):
     except:
         pass
     mystic = await CallbackQuery.message.reply_text(
-       _["play_2"].format(channel) if channel else "{random.choice(AYU)}"
+       _["play_2"].format(channel) if channel else random.choice(AYU)
     )
     try:
         details, track_id = await YouTube.track(vidid, True)
@@ -655,7 +655,7 @@ async def play_playlists_command(client, CallbackQuery, _):
     except:
         pass
     mystic = await CallbackQuery.message.reply_text(
-      _["play_2"].format(channel) if channel else "{random.choice(AYU)}"
+      _["play_2"].format(channel) if channel else random.choice(AYU)
     )
     videoid = lyrical.get(videoid)
     video = True if mode == "v" else None
